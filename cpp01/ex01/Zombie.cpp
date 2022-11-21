@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sneyt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 15:55:09 by sneyt             #+#    #+#             */
-/*   Updated: 2022/11/20 10:07:04 by sneyt            ###   ########.fr       */
+/*   Created: 2022/11/20 10:14:58 by sneyt             #+#    #+#             */
+/*   Updated: 2022/11/20 11:20:05 by sneyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int	main(void)
+//Constructor & destructor
+
+Zombie::Zombie()
 {
-	std::cout << "Building a zombie on the stack" << std::endl;
-	Zombie test1("test1");
-	test1.announce();
-	std::cout << std::endl;
+	std::cout << "Constructor called" << std::endl;
+}
 
-	std::cout << "building a zombie on the heap"<< std::endl;
-	Zombie *test2 = newZombie("test2");
-	test2->announce();
-	std::cout << std::endl;
+Zombie::~Zombie(void)
+{
+	std::cout << "Destructor called on " << this->_name << std::endl;
+}
 
-	std::cout << "building a zombie with randomChump()" << std::endl;
-	randomChump("test3");
-	std::cout << std::endl;
+void	Zombie::setName(std::string name)
+{
+	this->_name = name;
+}
 
-	delete(test2);
-	return (0);
+void	Zombie::announce(void)
+{
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

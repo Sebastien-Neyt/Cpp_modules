@@ -1,19 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sneyt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 16:18:31 by sneyt             #+#    #+#             */
-/*   Updated: 2022/11/20 10:18:06 by sneyt            ###   ########.fr       */
+/*   Created: 2022/11/20 11:15:51 by sneyt             #+#    #+#             */
+/*   Updated: 2022/11/21 11:21:28 by sneyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-void	randomChump(std::string name)
+#include <iostream>
+
+class Weapon
 {
-	Zombie isaac(name);
-	isaac.announce();
-}
+	public:
+		// Constructor & Destructor
+		Weapon(std::string type);
+		//Weapon(void);
+		~Weapon(void);
+
+		// Methods + setter/getter
+		const std::string&	getType();
+		void				setType(std::string type);
+
+
+	private:
+		std::string _type;
+};
+
+#endif
+

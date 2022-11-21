@@ -1,19 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sneyt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 16:18:31 by sneyt             #+#    #+#             */
-/*   Updated: 2022/11/20 10:18:06 by sneyt            ###   ########.fr       */
+/*   Created: 2022/11/20 11:20:14 by sneyt             #+#    #+#             */
+/*   Updated: 2022/11/21 11:21:22 by sneyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-void	randomChump(std::string name)
+// Constructor & Destructor
+
+Weapon::Weapon(std::string type)
 {
-	Zombie isaac(name);
-	isaac.announce();
+	this->_type = type;
+}
+/*
+Weapon::Weapon(void)
+{
+}	
+*/
+Weapon::~Weapon(void)
+{
+	
+}
+
+// Methods + getter + setter
+
+void	Weapon::setType(std::string type)
+{
+	this->_type = type;	
+}
+
+const std::string&	Weapon::getType(void)
+{
+	return (this->_type);
 }

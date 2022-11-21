@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sneyt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 16:18:31 by sneyt             #+#    #+#             */
-/*   Updated: 2022/11/20 10:18:06 by sneyt            ###   ########.fr       */
+/*   Created: 2022/11/20 11:32:21 by sneyt             #+#    #+#             */
+/*   Updated: 2022/11/21 12:56:58 by sneyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-void	randomChump(std::string name)
+class HumanB
 {
-	Zombie isaac(name);
-	isaac.announce();
-}
+	public:
+		// Constructor & Destructor
+		HumanB(std::string name);
+		~HumanB(void);
+	
+		// Methods
+		void	attack(void);
+		void	setWeapon(Weapon& weapon);
+	private:
+		// Attributes
+		std::string _name;
+		Weapon *_weapon;
+		bool	_is_armed;
+
+};

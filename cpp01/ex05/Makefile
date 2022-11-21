@@ -1,12 +1,10 @@
-NAME = zombiegenerator
+NAME = Harl2.0
 
-SRCS = newZombie.cpp\
-	   randomChump.cpp\
-	   Zombie.cpp\
+SRCS = Harl.cpp\
 	   main.cpp
 SRCS_DIR = ./
 
-INCS_DIR = Zombie.hpp
+INCS_DIR = Harl.hpp
 
 OBJ = $(SRCS:.cpp=.o)
 OBJS_DIR = objects/

@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sneyt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 16:18:31 by sneyt             #+#    #+#             */
-/*   Updated: 2022/11/20 10:18:06 by sneyt            ###   ########.fr       */
+/*   Created: 2022/11/20 10:12:32 by sneyt             #+#    #+#             */
+/*   Updated: 2022/11/20 10:30:49 by sneyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-void	randomChump(std::string name)
+class Zombie
 {
-	Zombie isaac(name);
-	isaac.announce();
-}
+	public:
+		// Constructor & destructor
+		Zombie();
+		~Zombie(void);
+
+		//methods
+		void	announce(void);
+		//setter
+		void	setName(std::string name);		
+
+	private:
+		std::string _name;
+};
+
+
+Zombie *zombieHorde(int N, std::string name);

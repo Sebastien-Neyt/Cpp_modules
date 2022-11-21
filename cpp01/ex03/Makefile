@@ -1,13 +1,14 @@
-NAME = zombiegenerator
+NAME = violence
 
-SRCS = newZombie.cpp\
-	   randomChump.cpp\
-	   Zombie.cpp\
-	   main.cpp
+SRCS = main.cpp\
+	   HumanA.cpp\
+	   HumanB.cpp\
+	   Weapon.cpp
 SRCS_DIR = ./
 
-INCS_DIR = Zombie.hpp
-
+INCS_DIR = HumanA.hpp\
+		   HumanB.hpp\
+		   Weapon.hpp
 OBJ = $(SRCS:.cpp=.o)
 OBJS_DIR = objects/
 OBJS = $(addprefix $(OBJS_DIR), $(OBJ))

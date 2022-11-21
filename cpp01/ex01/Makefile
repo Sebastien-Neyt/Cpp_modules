@@ -1,8 +1,7 @@
-NAME = zombiegenerator
+NAME = hordegenerator
 
-SRCS = newZombie.cpp\
-	   randomChump.cpp\
-	   Zombie.cpp\
+SRCS = Zombie.cpp\
+	   zombieHorde.cpp\
 	   main.cpp
 SRCS_DIR = ./
 

@@ -1,12 +1,9 @@
-NAME = zombiegenerator
+NAME = sedreplacer
 
-SRCS = newZombie.cpp\
-	   randomChump.cpp\
-	   Zombie.cpp\
-	   main.cpp
+SRCS = main.cpp
 SRCS_DIR = ./
 
-INCS_DIR = Zombie.hpp
+INCS_DIR =
 
 OBJ = $(SRCS:.cpp=.o)
 OBJS_DIR = objects/
