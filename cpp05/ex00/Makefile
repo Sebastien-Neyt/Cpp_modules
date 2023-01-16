@@ -1,10 +1,10 @@
-NAME = harl2.0
+NAME = bureaucrat
 
-SRCS = Harl.cpp\
+SRCS = Bureaucrat.cpp\
 	   main.cpp
 SRCS_DIR = ./
 
-INCS_DIR = Harl.hpp
+INCS_DIR = Bureaucrat.hpp
 
 OBJ = $(SRCS:.cpp=.o)
 OBJS_DIR = objects/

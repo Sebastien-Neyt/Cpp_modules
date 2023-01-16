@@ -5,19 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sneyt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 14:39:45 by sneyt             #+#    #+#             */
-/*   Updated: 2022/11/22 09:14:08 by sneyt            ###   ########.fr       */
+/*   Created: 2022/11/22 11:48:06 by sneyt             #+#    #+#             */
+/*   Updated: 2023/01/10 09:05:46 by sneyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Fixed.hpp"
 
 int	main(void)
 {
-	Harl harl;
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
 
-	harl.complain("ERROR");
-	harl.complain("WARNING");
-	harl.complain("INFO");
-	harl.complain("DEBUG");
-}	
+	c = b;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;	
+	return (0);
+}

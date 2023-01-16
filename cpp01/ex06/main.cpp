@@ -6,18 +6,16 @@
 /*   By: sneyt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 14:39:45 by sneyt             #+#    #+#             */
-/*   Updated: 2022/11/22 09:14:08 by sneyt            ###   ########.fr       */
+/*   Updated: 2022/11/22 09:30:49 by sneyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int	main(void)
+int	main(int argc, char *argv[])
 {
 	Harl harl;
-
-	harl.complain("ERROR");
-	harl.complain("WARNING");
-	harl.complain("INFO");
-	harl.complain("DEBUG");
+	if (argc == 2)
+		harl.complain(argv[1]);
+	return (0);
 }	

@@ -5,19 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sneyt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 14:39:45 by sneyt             #+#    #+#             */
-/*   Updated: 2022/11/22 09:14:08 by sneyt            ###   ########.fr       */
+/*   Created: 2022/12/01 14:50:16 by sneyt             #+#    #+#             */
+/*   Updated: 2023/01/06 08:46:41 by sneyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Fixed.hpp"
 
-int	main(void)
+int main( void )
 {
-	Harl harl;
-
-	harl.complain("ERROR");
-	harl.complain("WARNING");
-	harl.complain("INFO");
-	harl.complain("DEBUG");
-}	
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	
+	std::cout << b << std::endl;
+	
+//	std::cout << Fixed::max( a, b ) << std::endl;
+	
+	return 0;
+}

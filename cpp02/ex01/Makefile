@@ -1,10 +1,10 @@
-NAME = harl2.0
+NAME = fixedpoints
 
-SRCS = Harl.cpp\
+SRCS = Fixed.cpp\
 	   main.cpp
 SRCS_DIR = ./
 
-INCS_DIR = Harl.hpp
+INCS_DIR = Fixed.hpp
 
 OBJ = $(SRCS:.cpp=.o)
 OBJS_DIR = objects/
